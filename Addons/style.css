@@ -28,7 +28,7 @@ body {
   }
 
   /* zegarek w navbar */
-  .navbar #clock {
+#clock {
     float: right;
     color: #f2f2f2;
     text-align: center;
