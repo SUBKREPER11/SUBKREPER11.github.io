@@ -1,6 +1,6 @@
 var myVar = setInterval(function() {
     myTimer();
-  }, 1000);
+  }, 0000);
   
   function myTimer() {
     var d = new Date();

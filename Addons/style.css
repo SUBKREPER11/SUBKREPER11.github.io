@@ -9,13 +9,6 @@ body {
     src: url(./BurbankBigCondensed-Black.otf);
   }
 
-/* opcje czcionki zegara */
-#clock{
-    font-family: Burbank;
-    color: white;
-    font-size:10vw;
-}
-
 
 /* navbar tło */
 .navbar {
@@ -33,7 +26,17 @@ body {
     font-size: 17px;
     font-family: Burbank;
   }
-  
+
+  /* zegarek w navbar */
+  .navbar #clock {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Burbank;
+  }
   /* Kolor podświetlenia linków navbar */
   .navbar a:hover {
     background-color: #ddd;
@@ -46,11 +49,13 @@ body {
     color: white;
   }
 
-
-  /* Media - siatka */
-  .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    grid-column: 4;
-  }
+.body {
+  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+}
