@@ -20,6 +20,16 @@ function setCookie(cname, cvalue, exdays) {
     return "";
   }
   
+  function delCookie(){
+    let user = getCookie("username");
+    if (user != "") {
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        alert("User deleted");
+      } else {
+        alert("User deleted");
+      }
+  }
+
   function checkCookie() {
     let user = getCookie("username");
     if (user != "") {
