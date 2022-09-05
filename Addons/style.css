@@ -47,6 +47,7 @@ body {
   .navbar a.active {
     background-color: #fc2403;
     color: white;
+    pointer-events: none; 
   }
 
 .body {
