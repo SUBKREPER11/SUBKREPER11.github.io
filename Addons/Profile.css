@@ -10,14 +10,14 @@
   .wrapper{
     width: 100%;
     display: flex;
-    animation: slide 16s infinite;
+    /* animation: slide 16s infinite; */
   }
   
   .wrapper > img{
     width: 100%;
   }
   
-  @keyframes slide{
+  /* @keyframes slide{
     0%{
         transform: translateX(0);
     }
@@ -36,7 +36,7 @@
     100%{
         transform: translateX(-200%);
     }
-  }
+  } */
   
   #profile-box {
     width: 25vh;
