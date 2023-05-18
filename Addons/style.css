@@ -65,3 +65,12 @@ ul #embed li {
   font-size: 5vw;
   line-height: 80px;
 }
+
+@media(orientation: portrait){
+  .navbar{
+      position: fixed;
+      width: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}

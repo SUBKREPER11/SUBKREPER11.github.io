@@ -1,3 +1,19 @@
 img {
+    width: 25vh;
+    margin-top: 10vh;
+    transition: 0.5s;
+}
+img:hover{
     width: 30vh;
+}
+#cont{
+    display: block;
+    margin-top: 15vh;
+    margin-bottom: auto;
+    text-align: center;
+}
+@media screen and (max-width: 1000px) {
+    #cont{
+        margin-top: 0.1vh;
+    } 
 }

@@ -50,3 +50,8 @@
   #profile-content{
     margin: 10%;
   }
+  @media(orientation: portrait){
+   #profile-box{
+    margin-top: 20%;
+   }
+  }
