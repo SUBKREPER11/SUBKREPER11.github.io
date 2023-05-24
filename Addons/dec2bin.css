@@ -1,0 +1,28 @@
+#bd{
+    display: block;
+    padding-top: 15vh;
+    margin-top: 1vh;
+    text-align: center;
+    width: auto;
+    height: 75vh;
+    background-color: white;
+    transition: 0.4s;
+}
+input{
+    margin: 1vh;
+}
+#num, #calc{
+border-radius: 1vh;
+min-height: 5vh;
+max-height: fit-content;
+}
+#calc,#res{
+    font-weight: bold;
+}
+#res{
+    
+    font-size: 10vw;
+}
+#num{
+    font-size: 2vh;
+}

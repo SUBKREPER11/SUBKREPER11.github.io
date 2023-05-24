@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Addons/style.css">
+    <link rel="stylesheet" href="../Addons/dec2bin.css">
     <script src="../Addons/script.js"></script>
-    <script src="../Addons/cookie.js"></script>
-    <title>Cookie</title>
+    <script src="../Addons/dec2bin.js"></script>
+    <title>Dec2Bin</title>
     <link rel="icon" type="image/png" href="/Addons/IMG/S11page.png">
 </head>
-
-<body onload="checkCookie()">
+<body>
     <div class="navbar">
         <a href="../">Start</a>
         <a href="../media/">Media</a>
-        <a href="../dec2bin/">Dec2Bin</a>
-        <a class="active" href="./cookie/">Cookie</a>
+        <a class="active" href="./">Dec2Bin</a>
         <div id="clock"></div>
-    </div>
+      </div>
     <div id="body">
-        <button onclick="delCookie()">DelCookie</button>
+        <div id="bd">
+        <!-- <div id="pres">Result:</div></br> -->
+        <div id="res">0</div>
+        <input type="number" name="num" id="num" onkeypress="return !(event.charCode == 46)"></br>
+        <input type="button" value="Przelicz" id="calc" onclick="calc()"></br>
+        </div>
     </div>
 </body>
-
 </html>
