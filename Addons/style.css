@@ -67,10 +67,7 @@ ul #embed li {
 }
 
 @media(orientation: portrait){
-  .navbar{
-      position: fixed;
-      width: 90vw;
-      left: 50%;
-      transform: translateX(-50%);
+  #clock{
+    display: none;
   }
 }
