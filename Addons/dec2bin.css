@@ -7,6 +7,7 @@
     height: 75vh;
     background-color: white;
     transition: 0.4s;
+    border-radius: 1vw;
 }
 input{
     margin: 1vh;
