@@ -16,7 +16,9 @@
   .wrapper > img{
     width: 100%;
   }
-  
+  .body{
+  display: flex;
+  }
   /* @keyframes slide{
     0%{
         transform: translateX(0);

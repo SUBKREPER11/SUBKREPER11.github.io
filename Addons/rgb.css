@@ -1,0 +1,10 @@
+input[type=color]{
+    width: 90vw;
+    height: 5vh;
+    
+}
+.body{
+    /* clear: both; */
+    flex-direction: column;
+    text-align: center;
+}

@@ -15,7 +15,7 @@
         <a href="../media/">Media</a>
         <div id="clock"></div>
       </div>
-    <div id="body">
+    <div class="body">
     </div>
 </body>
 </html>

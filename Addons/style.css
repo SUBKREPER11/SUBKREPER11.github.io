@@ -60,9 +60,9 @@ body {
   width: 100%;
   min-height:90.5vh;
   background: white;
-  display: flex;
   justify-content: center;
   border-radius: 1vw;
+  display: flex;
 }
 ul #embed li {
   display: inline-block;
