@@ -2,6 +2,7 @@ img {
     width: 25vh;
     margin-top: 10vh;
     transition: 0.5s;
+    border-radius: 5vh;
 }
 img:hover{
     width: 30vh;
