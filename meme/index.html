@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Addons/style.css">
+    <link rel="stylesheet" href="/Addons/meme.css">
+    <script src="/Addons/script.js"></script>
+    <title>Meme generator</title>
+    <link rel="icon" type="image/png" href="/Addons/IMG/S11page.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../">Start</a>
+        <a href="../media/">Media</a>
+        <a href="../dec2bin/">Dec2Bin</a>
+        <a href="../fortnite/">Fortnite</a>
+        <a class="active" href="./">Meme generator</a>
+        <div id="clock"></div>
+    </div>
+    <div class="body">
+        <div class="meme-generator">
+            <label for="imageFileInput">Wybierz obraz</label>
+            <input type="file" id="imageFileInput">
+            <label for="topTextInput">Tekst górny</label>
+            <input type="text" id="topTextInput">
+            <label for="bottomTextInput">Tekst dolny</label>
+            <input type="text" id="bottomTextInput">
+            <canvas id="meme"></canvas>
+            <input type="button" value="Pobierz" id="save-btn">
+            <script src="/Addons/meme.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
