@@ -13,3 +13,6 @@
     box-sizing: border-box;
     margin-bottom: 2vh;
 }
+.meme-generator canvas{
+    width: 50vw;
+}
