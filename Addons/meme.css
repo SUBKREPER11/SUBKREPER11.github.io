@@ -14,5 +14,9 @@
     margin-bottom: 2vh;
 }
 .meme-generator canvas{
-    width: 50vw;
+    width: 25vw;
+    padding: 0;
+    margin: auto;
+    display: block;
+    margin-bottom: 2vh;
 }

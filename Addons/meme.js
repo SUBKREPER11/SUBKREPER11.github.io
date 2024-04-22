@@ -10,6 +10,7 @@ imageFileInput.addEventListener("change", (e) => {
 
   image = new Image();
   image.src = imageDataUrl;
+  document.getElementById("save-btn").disabled = false;
 
   image.addEventListener(
     "load",
