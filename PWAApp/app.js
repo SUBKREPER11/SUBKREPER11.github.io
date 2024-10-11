@@ -1,6 +1,6 @@
 console.log('Aplikacja PWA działa!');
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/PWAApp/service-worker.js')
         .then((registration) => {
             console.log('Service Worker zarejestrowany:', registration.scope);
         })
