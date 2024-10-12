@@ -11,40 +11,34 @@ function setTheme(theme) {
     localStorage.setItem('theme', theme);
 }
 
-// Zdarzenie zmiany checkboxa
-toggle.addEventListener('change', () => {
-    if (toggle.checked) {
-        setTheme('dark');
-    } else {
-        setTheme('light');
-    }
-});
+// Sprawdzenie, czy toggle istnieje (czyli czy jest w settings.html)
+if (toggle) {
+    // Zdarzenie zmiany checkboxa
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    });
 
-// Ustaw motyw przy starcie
-const savedTheme = localStorage.getItem('theme') || 'light';
-setTheme(savedTheme);
-toggle.checked = savedTheme === 'dark';
-
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
+    // Ustaw motyw przy starcie
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    toggle.checked = savedTheme === 'dark';
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+// Ustaw motyw przy starcie w index.html
+const savedTheme = localStorage.getItem('theme') || 'light';
+const link = document.getElementById('theme-stylesheet');
+link.setAttribute('href', savedTheme === 'dark' ? '/PWAApp/dark.css' : '/PWAApp/light.css');
 
-// Check for saved theme in localStorage
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+// Ustaw tło przy starcie
+const backgroundImageDiv = document.getElementById('background-image');
+const backgroundImage = localStorage.getItem('backgroundImage');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
+if (backgroundImage) {
+    backgroundImageDiv.style.backgroundImage = `url(${backgroundImage})`;
+    backgroundImageDiv.style.backgroundSize = 'cover';
+    backgroundImageDiv.style.backgroundPosition = 'center';
 }
