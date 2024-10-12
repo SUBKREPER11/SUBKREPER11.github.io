@@ -19,7 +19,7 @@
         <a href="https://www.youtube.com">
             <img src="icon1.png" alt="Ikona 1" class="footer-icon">
         </a>
-        <a href="">
+        <a href="./settings/settings.html">
             <img src="icon2.png" alt="Ikona 2" class="footer-icon">
         </a>
         <a href="">
@@ -31,7 +31,18 @@
     </div>
     <script src="/PWAApp/addons/clock.js"></script>
     <script src="/PWAApp/app.js"></script>
-    <script src="/PWAApp/addons/fileupl.js"></script>
+    <!-- <script src="/PWAApp/addons/fileupl.js"></script> -->
+    <script>
+        // Sprawdź, czy istnieje obraz w LocalStorage i ustaw go jako tło
+        const backgroundImageDiv = document.getElementById('background-image');
+        const backgroundImage = localStorage.getItem('backgroundImage');
+
+        if (backgroundImage) {
+            backgroundImageDiv.style.backgroundImage = `url(${backgroundImage})`;
+            backgroundImageDiv.style.backgroundSize = 'cover';
+            backgroundImageDiv.style.backgroundPosition = 'center';
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Background</title>
+</head>
+<body>
+    <div>
+        <input type="file" id="backgroundUploader" accept="image/*">
+    </div>
+
+    <script>
+        const backgroundUploader = document.getElementById('backgroundUploader');
+
+        backgroundUploader.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                // Zapisz dane obrazu w LocalStorage
+                localStorage.setItem('backgroundImage', e.target.result);
+
+                // Przekieruj użytkownika z powrotem na główną stronę
+                window.location.href = '../index.html'; // ścieżka do głównego index.html
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
