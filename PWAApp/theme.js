@@ -4,9 +4,9 @@ const toggle = document.getElementById('themeToggle');
 function setTheme(theme) {
     const link = document.getElementById('theme-stylesheet');
     if (theme === 'dark') {
-        link.setAttribute('href', 'dark.css');
+        link.setAttribute('href', '/PWAApp/dark.css');
     } else {
-        link.setAttribute('href', 'light.css');
+        link.setAttribute('href', '/PWAApp/light.css');
     }
     localStorage.setItem('theme', theme);
 }
