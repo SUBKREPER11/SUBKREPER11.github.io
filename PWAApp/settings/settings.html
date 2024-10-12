@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Background</title>
+    <link rel="stylesheet" href="/PWAApp/settings/settings.css">
+    <title>Settings</title>
 </head>
+
 <body>
+    <h1>Settings</h1>
     <div>
         <input type="file" id="backgroundUploader" accept="image/*">
     </div>
-
+    <div>
+        <label>
+            <input type="checkbox" id="themeToggle"> Ciemny motyw
+        </label>
+    </div>
     <script>
         const backgroundUploader = document.getElementById('backgroundUploader');
 
@@ -17,12 +25,11 @@
             const file = event.target.files[0];
             const reader = new FileReader();
 
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 // Zapisz dane obrazu w LocalStorage
                 localStorage.setItem('backgroundImage', e.target.result);
 
                 // Przekieruj użytkownika z powrotem na główną stronę
-                window.location.href = '../index.html'; // ścieżka do głównego index.html
             };
 
             if (file) {
@@ -30,5 +37,8 @@
             }
         });
     </script>
+    <script src="../addons/theme.js"></script>
+
 </body>
+
 </html>
