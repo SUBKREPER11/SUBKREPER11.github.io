@@ -1,32 +1,25 @@
-// Funkcja do ustawienia motywu
-function setTheme(theme) {
-    const themeStylesheet = document.getElementById('themeStylesheet');
-    if (theme === 'dark') {
+const themeToggle = document.getElementById('themeToggle');
+
+// Sprawdzenie, czy w localStorage jest zapisany motyw
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.body.className = currentTheme;
+
+// Ustawienie stanu checkboxa na podstawie aktualnego motywu
+themeToggle.checked = currentTheme === 'dark';
+
+// Funkcja zmieniająca motyw
+themeToggle.addEventListener('change', () => {
+    const newTheme = themeToggle.checked ? 'dark' : 'light';
+    document.body.className = newTheme;
+
+    // Zapisanie wybranego motywu w localStorage
+    localStorage.setItem('theme', newTheme);
+    
+    // Ładowanie odpowiedniego pliku CSS
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    if (newTheme === 'dark') {
         themeStylesheet.href = './dark.css';
-        localStorage.setItem('theme', 'dark');
     } else {
         themeStylesheet.href = './light.css';
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-// Sprawdź zapisany motyw po załadowaniu strony
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        // Ustaw stan checkboxa zgodnie z zapisanym motywem
-        themeToggle.checked = (savedTheme === 'dark');
-
-        // Dodaj event listener dla zmiany motywu
-        themeToggle.addEventListener('change', function () {
-            if (this.checked) {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
-        });
     }
 });
