@@ -7,7 +7,8 @@
     <title>Moja PWA</title>
     <link rel="stylesheet" href="/PWAApp/style.css">
     <link rel="manifest" href="/PWAApp/manifest.json">
-    <link id="theme-stylesheet" rel="stylesheet" href="/PWAApp/addons/light.css"> <!-- Domyślnie ustawiony jasny motyw -->
+    <link id="theme-stylesheet" rel="stylesheet" href="/PWAApp/addons/light.css">
+    <!-- Domyślnie ustawiony jasny motyw -->
 
 </head>
 
@@ -16,10 +17,10 @@
     <div id="watch"></div>
     <div class="footer">
         <a href="https://www.youtube.com">
-            <img src="icon1.png" alt="Ikona 1" class="footer-icon">
+            <img src="/PWAApp/addons/icons/video.svg" alt="Ikona 1" class="footer-icon">
         </a>
         <a href="./settings/settings.html">
-            <img src="icon2.png" alt="Ikona 2" class="footer-icon">
+            <img src="/PWAApp/addons/icons/settings.svg" alt="Ikona 2" class="footer-icon">
         </a>
         <a href="">
             <img src="icon3.png" alt="Ikona 3" class="footer-icon">
@@ -31,18 +32,6 @@
     <script src="/PWAApp/addons/clock.js"></script>
     <script src="/PWAApp/addons/theme.js"></script>
     <script src="/PWAApp/app.js"></script>
-
-    <!-- <script>
-        // Sprawdź, czy istnieje obraz w LocalStorage i ustaw go jako tło
-        const backgroundImageDiv = document.getElementById('background-image');
-        const backgroundImage = localStorage.getItem('backgroundImage');
-
-        if (backgroundImage) {
-            backgroundImageDiv.style.backgroundImage = `url(${backgroundImage})`;
-            backgroundImageDiv.style.backgroundSize = 'cover';
-            backgroundImageDiv.style.backgroundPosition = 'center';
-        }
-    </script> -->
 </body>
 
 </html>
