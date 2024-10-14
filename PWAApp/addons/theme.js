@@ -4,9 +4,9 @@ const toggle = document.getElementById('themeToggle');
 function setTheme(theme) {
     const link = document.getElementById('theme-stylesheet');
     if (theme === 'dark') {
-        link.setAttribute('href', '/PWAApp/dark.css');
+        link.setAttribute('href', '/PWAApp/addons/dark.css');
     } else {
-        link.setAttribute('href', '/PWAApp/light.css');
+        link.setAttribute('href', '/PWAApp/addons/light.css');
     }
     localStorage.setItem('theme', theme);
 }
@@ -31,7 +31,7 @@ if (toggle) {
 // Ustaw motyw przy starcie w index.html
 const savedTheme = localStorage.getItem('theme') || 'light';
 const link = document.getElementById('theme-stylesheet');
-link.setAttribute('href', savedTheme === 'dark' ? '/PWAApp/dark.css' : '/PWAApp/light.css');
+link.setAttribute('href', savedTheme === 'dark' ? '/PWAApp/addons/dark.css' : '/PWAApp/addons/light.css');
 
 // Ustaw tło przy starcie
 const backgroundImageDiv = document.getElementById('background-image');

@@ -1,16 +1,16 @@
 const CACHE_NAME = 'moja-pwa-cache';
 const urlsToCache = [
     '/PWAApp/',
+    '/PWAApp/manifest.json',
+    '/PWAApp/app.js',
     '/PWAApp/index.html',
     '/PWAApp/style.css',
-    '/PWAApp/app.js',
-    '/PWAApp/addons/clock.js',
-    '/PWAApp/manifest.json',
     '/PWAApp/settings/settings.html',
     '/PWAApp/settings/settings.css',
-    '/PWAApp/theme.js',
-    '/PWAApp/light.css',
-    '/PWAApp/dark.css'
+    '/PWAApp/addons/clock.js',
+    '/PWAApp/addons/theme.js',
+    '/PWAApp/addons/light.css',
+    '/PWAApp/addons/dark.css'
 ];
 
 // Instalacja Service Workera i cache'owanie zasobów
