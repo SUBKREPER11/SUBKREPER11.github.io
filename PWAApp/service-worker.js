@@ -10,7 +10,9 @@ const urlsToCache = [
     '/PWAApp/addons/clock.js',
     '/PWAApp/addons/theme.js',
     '/PWAApp/addons/light.css',
-    '/PWAApp/addons/dark.css'
+    '/PWAApp/addons/dark.css',
+    '/PWAApp/addons/icons/video.svg',
+    '/PWAApp/addons/icons/settings.svg'
 ];
 
 // Instalacja Service Workera i cache'owanie zasobów
