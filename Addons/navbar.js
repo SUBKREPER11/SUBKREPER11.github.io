@@ -4,6 +4,7 @@ fetch('/Addons/navbar.html')
     .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
         setActiveLink(); // Ustaw aktywny link po załadowaniu navbaru
+        loadExternalScript('/Addons/script.js'); // Wczytaj zewnętrzny skrypt
     });
 
 // Funkcja do ustawiania aktywnego linku
@@ -21,4 +22,14 @@ function setActiveLink() {
             link.classList.remove('active'); // Usuń klasę 'active' z innych linków
         }
     });
+}
+
+// Funkcja do wczytywania zewnętrznego skryptu
+function loadExternalScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => {
+        console.log(`${src} załadowany!`); // Możesz dodać logikę po załadowaniu
+    };
+    document.body.appendChild(script);
 }
