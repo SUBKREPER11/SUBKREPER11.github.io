@@ -1,0 +1,9 @@
+.link {
+    height: 6vw;
+}
+.link:hover {
+    height: 8vw;
+}
+#infpp{
+    width: 60%;
+}
