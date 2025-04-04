@@ -1,10 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
-    /* background: linear-gradient(30deg, #334, #766); */
-    background: linear-gradient(45deg, #335, #866);
-    background-size: 150% 150%;
-    animation: gradient 15s ease infinite;
+    background: #ddd
 }
 
 #mainbd {
@@ -62,30 +59,40 @@ body {
 
 .link {
     height: 6vw;
-    fill: rgba(255, 255, 255, 0.5);
-    transition: height 0.5s ease-in-out;
+    fill: #ddd;
     padding: 1.5vh;
-    animation: pulse-shadow 1.5s infinite alternate;
-    filter: drop-shadow(0 0 5vh rgba(255, 255, 255, 0.6));
-    /* background-color: lime; */
+    transition: 0.5s;
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+    filter: 
+        drop-shadow(0 0.5px 2px rgba(0, 0, 0, 0.1)) /* mniejsze przesunięcie i rozmycie */
+        drop-shadow(0 -0.5px 2px rgba(0, 0, 0, 0.1))
+        drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
 }
 
 .good-text {
     font-family: Arial;
     font-weight: bold;
-    /* font-size: 5vh; */
     font-size: 3vw;
     transition: 0.5s;
-    color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 5vh rgba(255, 255, 255, 0.6);
+    color: #ddd;
     margin: 3vh;
-    animation: pulse 1.5s infinite alternate;
+    text-shadow:
+    -1px -1px 0 rgba(255, 255, 255, 0.25),
+     1px -1px 0 rgba(255, 255, 255, 0.25),
+    -1px  1px 0 rgba(255, 255, 255, 0.25),
+     1px  1px 0 rgba(255, 255, 255, 0.25),
+     0 0 5px rgba(0, 0, 0, 0.1),
+    0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .fancybox {
-    box-shadow: 0 0 5vh rgba(0, 0, 0, 1);
-    outline: 3px solid rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25)
 }
 
 .flex {
@@ -96,22 +103,21 @@ body {
 
 #invisibl {
     width: 75%;
-    /* background-color: skyblue; */
     height: 100%;
     flex-wrap: wrap;
 
 }
 
 #content:hover {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .square:hover {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .rect:hover {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #content:hover .good-text {
@@ -125,38 +131,4 @@ body {
 
 .link:nth-child(4) {
     order: -1;
-}
-
-@keyframes pulse {
-    0% {
-        text-shadow: 0 0 5vh rgba(255, 255, 255, 0.6);
-    }
-
-    100% {
-        text-shadow: 0 0 5vh rgba(255, 255, 255, 0.75);
-    }
-}
-
-@keyframes pulse-shadow {
-    0% {
-        filter: drop-shadow(0 0 5vh rgba(255, 255, 255, 0.6));
-    }
-
-    100% {
-        filter: drop-shadow(0 0 5vh rgba(255, 255, 255, 0.75));
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
