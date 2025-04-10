@@ -1,9 +1,9 @@
 .link {
-    fill: #444;
+    fill: #555;
     stroke: rgba(0, 0, 0, 0.5);
 }
 .good-text {
-    color: #444;
+    color: #555;
     text-shadow:
     0 0 1px rgba(0, 0, 0, 0.5),
     0 0 2px rgba(0, 0, 0, 0.5);
